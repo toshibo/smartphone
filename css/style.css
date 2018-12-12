@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*border: 1px solid #ff0000;*/
+  border:1px solid #ff0000;
 }
 body {
   background-color: #ddd9d3;
@@ -449,6 +449,7 @@ div.swiper-container div.swiper-slide div.review-brewery {
 
 div.swiper-container div.swiper-slide div.review-graph {
   display: flex;
+  width: 100%;
   padding-top: 8px;
 }
 
@@ -468,7 +469,8 @@ div.swiper-container div.swiper-slide div.review-graph div.review-graph-bar {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 120px;
+  width: calc(100% - 160px);
+  /*width: 120px;*/
   border-radius: 2px;
   height: 4px;
   margin: 0 10px;
@@ -479,7 +481,8 @@ div.swiper-container div.swiper-slide div.review-graph div.review-graph-bar {
 div.swiper-container div.swiper-slide div.review-graph div.review-graph-bar div.review-graph-pointer {
   position: relative;
   top: -4px;
-  width: 154px; /* width of the superclass - width of the pointer */
+  width: 10px;
+  /*width: 154px; width of the superclass - width of the pointer */
   height:10px;
   background-image: url("../images/review-graph-pointer.gif");
   background-repeat: no-repeat;
@@ -545,6 +548,7 @@ div.swiper-container div.swiper-slide div.review-user img{
     margin-top: 40px;
     width: 100%;
     min-width: 100%;
+    max-width: 100%;
     font-family: 'Roboto', sans-serif;
   }
 
@@ -566,8 +570,8 @@ div.swiper-container div.swiper-slide div.review-user img{
   }
 
   div.swiper-container div.swiper-slide div.review-image img {
-    width: 280px;
-    height: 185px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
   }

@@ -357,7 +357,7 @@ div.article-pane p.info {
 
   div.article-pane {
     margin-top: 28px;
-    width: 156px;
+    width: 46%;
   }
   div.article-pane:not(:first-child) {
     margin-top: 28px;

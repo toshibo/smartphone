@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  max-width: 100%;
+  box-sizing: border-box;
 }
 body {
   background-color: #ddd9d3;
   color: #333;
   font-family: 'Crimson Text', 'Noto Serif JP', sans-serif;
   letter-spacing: 0.02em;
+
 }
 
 div.container-wrapper {
@@ -551,7 +552,7 @@ div.swiper-container div.swiper-slide div.review-user img{
   }
 
   div.swiper-container div.swiper-slide {
-    width: 280px;
+    width: 100%;
     margin-bottom: 20px;
     padding: 25px;
     border-radius: 8px;

@@ -1,3 +1,4 @@
+/*************** global properties         ******************/
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@ body {
   letter-spacing: 0.02em;
 
 }
-
+/*************** end of global properties         ******************/
 div.container-wrapper {
   max-width: 1920px;
   width:100%;
@@ -26,7 +27,7 @@ div.container-wrapper {
     width: 100%;
     margin: 0;
     padding-top: 22px;
-    background-position: center 280px;
+    background-position: center 200px;
   }
 }
 
@@ -75,6 +76,8 @@ div.header h1 img {
     left: 0;
     background-color: #fff;
     border-bottom-right-radius: 8px;
+    text-align: left;
+    padding-left: 8px;
   }
   div.header h1 img {
     width: 44px;
@@ -90,6 +93,10 @@ div.header nav {
 
 }
 
+div.header nav div.logo {
+  display: none;
+}
+
 @media screen and (max-width:480px) {
   div.header nav {
     display: none;
@@ -103,6 +110,38 @@ div.header nav {
     background-color: #fff;
   }
 
+  div.header nav.open {
+    display: block;
+  }
+
+  div.header nav div.logo {
+    display: block;
+    text-align: center;
+  }
+
+  div.header nav div.logo img {
+    margin-top: 50px;
+    width: 98px;
+    height: 69px;
+  }
+
+  div.header nav.close {
+    display: none;
+  }
+
+  div.header nav {
+    padding-top: 74px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 10;
+    background-color: #fff;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+  }
+
   div.header a.nav-button {
     display: block;
     cursor: pointer;
@@ -110,6 +149,7 @@ div.header nav {
     position: absolute;
     top: 0;
     right: 0;
+    margin-top: 3px;
     margin-right: 3px;
     width: 25px;
     height: 18px;
@@ -140,15 +180,18 @@ div.header nav {
     bottom: 0;
   }
 
+  .nav-button.active span:nth-of-type(1) {
+    -webkit-transform: translateY(8px) rotate(-45deg);
+    transform: translateY(8px) rotate(-45deg);
+  }
+  .nav-button.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .nav-button.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
+  }
 
-}
-
-div.header nav.open {
-  display: block;
-}
-
-div.header nav.close {
-  display: none;
 }
 
 div.header nav ul {
@@ -287,7 +330,8 @@ div.article-pane p.info {
 
 @media screen and (max-width:480px) {
   div.articles {
-    margin-top: 26px;
+    margin-top: 25px;
+    padding: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -314,7 +358,7 @@ div.article-pane p.info {
   div.pickup-article-date {
     float: right;
     width: 60px;
-    padding-left: 20px;
+    padding-left: 16px;
     padding-right: 0;
     border-left: 1px solid #333;
   }
@@ -336,14 +380,14 @@ div.article-pane p.info {
     padding: 0;
   }
   div.pickup-article-info p.title {
-    font-size: 24px;
+    font-size: 18px;
     margin-top: -8px;
     margin-bottom: 10px;
-    padding-right: 20px;
+    padding-right: 16px;
     line-height: 1.6;
   }
   div.pickup-article-info p.info {
-    font-size: 14px;
+    font-size: 10px;
     color: #968f86;
     font-family: 'Roboto', sans-serif;
   }
@@ -383,8 +427,8 @@ div.article-pane p.info {
 
   div.article-info p.article-date {
     font-size: 12px;
-    margin-top: 20px;
-    margin-bottom: 14px;
+    margin-top: 8px;
+    margin-bottom: 5px;
   }
 
   div.article-info p.title {
@@ -395,7 +439,8 @@ div.article-pane p.info {
   div.article-pane p.info {
     clear: both;
     padding-top: 10px;
-    font-size: 11px;
+    font-size: 10px;
+    line-height: 1.6;
     color: #968f86;
   }
 }
@@ -695,7 +740,6 @@ h2 {
   margin-bottom: 40px;
   width: 100%;
   font-size: 24px;
-
 }
 
 div.reviewers {
@@ -837,4 +881,12 @@ div.footer div.copyright {
       width: 98px;
       height: 69px;
   }
+}
+
+/*************** end of top page             ******************/
+/*************** begenning of all articles   ******************/
+div.container-2col-main {
+  width: calc(100% - 120px);
+  padding-top: 10px;
+  display: flex;
 }

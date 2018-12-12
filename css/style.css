@@ -365,12 +365,12 @@ div.article-pane p.info {
 
   div.article-image {
     float: none;
-    width: 156px;
+    width: 100%;
   }
 
   div.article-image img {
-    width: 156px;
-    height: 104px;
+    width: 100%;
+    height: auto;
   }
 
   div.article-info {

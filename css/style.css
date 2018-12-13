@@ -362,10 +362,12 @@ div.other-articles div.article-pane p.info {
   }
 
   div.pickup-article-date p.year-month {
+    margin-top: -8px;
     font-size: 14px;
     text-align: center;
   }
   div.pickup-article-date p.day {
+    margin-top: -8px;
     margin-bottom: -15px;
     font-size: 52px;
     font-weight: bold;

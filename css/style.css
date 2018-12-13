@@ -11,6 +11,11 @@ body {
   letter-spacing: 0.02em;
 
 }
+
+a {
+  text-decoration: none;
+}
+
 /*************** end of global properties         ******************/
 div.container-wrapper {
   max-width: 1920px;
@@ -53,11 +58,11 @@ div.container-1st {
 div.header{
   width: 120px;
 }
-div.header h1 {
+div.header h1.logo {
   text-align: center;
 }
 
-div.header h1 img {
+div.header h1.logo img {
   width: 87px;
   height: 274px;
 }
@@ -80,7 +85,7 @@ div.header nav div.logo {
     width: 100%;
     height: 21px;
   }
-  div.header h1 {
+  div.header h1.logo {
     width: 75px;
     height: 164px;
     position: absolute;
@@ -92,7 +97,7 @@ div.header nav div.logo {
     text-align: left;
     padding-left: 8px;
   }
-  div.header h1 img {
+  div.header h1.logo img {
     width: 44px;
     height: 137px;
   }
@@ -252,6 +257,7 @@ div.pickup-article-image {
 
 div.pickup-article-date {
   float: left;
+  width: 68px;
   padding-right: 24px;
 }
 
@@ -267,7 +273,7 @@ div.pickup-article-date p.day {
 }
 div.pickup-article-info {
   float:left;
-  width: 482px;
+  width: 562px;
   border-left: 1px solid #333;
   padding: 0 10px 0 24px;
 }
@@ -738,12 +744,12 @@ div.container-2nd {
   background-color: #ebe7e1;
 }
 
-h2 {
+p.heading {
   width: 100%;
   min-width: 768px;
   max-width: 1140px;
   margin: 0 auto;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 div.reviewers {
@@ -788,8 +794,8 @@ div.reviewers div.reviewer-pane div.reviewer-review-count {
     background-color: #ebe7e1;
   }
 
-  h2 {
-    margin-bottom: 10px;
+  p.heading {
+    padding-top: 35px;
     width: 100%;
     min-width: 100%;
     font-size: 24px;
@@ -800,7 +806,7 @@ div.reviewers div.reviewer-pane div.reviewer-review-count {
     width: 100%;
     min-width: 100%;
     margin: 0;
-    padding-top: 35px;
+    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -894,13 +900,543 @@ div.footer-logo img {
 }
 
 /*************** end of top page             ******************/
-/*************** begenning of all articles   ******************/
-div.container-2col-main {
+/*************** begenning of Article        ******************/
+div.container-main {
   width: calc(100% - 120px);
-  padding-top: 34px;
+  padding-top: 10px;
   display: flex;
 }
 
+div.container-main-left {
+  min-width: 650px;
+  width: 80%;
+}
+
+div.main-article-pane {
+  margin: 0 auto;
+  width: 630px;
+}
+
+div.main-article-image {
+  margin-bottom: 30px;
+}
+
+div.main-article-image img {
+  border-radius: 8px;
+}
+
+div.main-article-date {
+  float: left;
+  width: 68px;
+  padding-right: 24px;
+}
+
+div.main-article-date p.year-month {
+  font-size: 14px;
+  text-align: center;
+}
+div.main-article-date p.day {
+  margin-bottom: -15px;
+  font-size: 52px;
+  font-weight: bold;
+  text-align: center;
+}
+div.main-article-info {
+  float:left;
+  width: 562px;
+  border-left: 1px solid #333;
+  padding: 0 10px 0 24px;
+}
+div.main-article-info h1.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+div.main-article-info p.info {
+  font-size: 14px;
+  color: #968f86;
+  font-family: 'Roboto', sans-serif;
+}
+
+div.main-article-content {
+  margin-top: 40px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 2.0;
+  clear: both;
+}
+
+
+
+div.main-article-content p {
+  margin-bottom: 40px;
+}
+
+div.main-article-content h2 {
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  width: 100%;
+  font-size: 22px;
+  font-family: 'Crimson Text', sans-serif;
+}
+
+div.main-article-content h2::before {
+  position: relative;
+  top: 0;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  content: '';
+  border-radius: 100%;
+  background-color: #98001b;
+  display: inline-block;
+}
+
+div.main-article-content h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Crimson Text', sans-serif;
+}
+
+div.main-article-content h3::before {
+  position: relative;
+  top: -6px;
+  left: -10px;
+  width: 15px;
+  height: 1px;
+  content: '';
+  background-color: #98001b;
+  display: inline-block;
+}
+
+div.main-article-content div.toc {
+  margin-top: 40px;
+  padding: 30px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+}
+
+div.main-article-content div.toc div {
+    padding-right: 30px;
+    font-size: 18px;
+    font-family: 'Crimson Text', sans-serif;
+}
+
+div.main-article-content div.toc ol {
+  border-left: 1px solid #333;
+  padding-left: 44px;
+}
+
+div.main-article-content div.toc ol li a {
+  color: #98001b;
+}
+
+div.main-article-content table {
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+div.main-article-content table th {
+  background-color: #ebe7e1;
+  padding: 20px;
+  font-weight: bold;
+  border: 1px solid #ddd8d2;
+}
+
+div.main-article-content table td {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd8d2;
+}
+
+div.main-article-content ul {
+
+}
+
+div.main-article-content ul li {
+  margin-left: 18px;
+}
+
+div.container-main-right {
+  margin: 0 auto;
+  min-width: 280px;
+  width: 30%;
+  font-family: 'Roboto', sans-serif;
+}
+
+div.intro-article-pane:not(:first-child) {
+  margin-top: 32px;
+}
+
+div.intro-article-image {
+  float: left;
+  width: 120px;
+}
+
+div.intro-article-image img{
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+div.intro-article-info {
+  float: left;
+  width: 140px;
+  margin-left: 20px;
+}
+
+div.intro-article-info p.date {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+div.intro-article-info p.title {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+div.intro-article-pane p.info {
+  clear: both;
+  padding-top: 10px;
+  font-size: 11px;
+  color: #968f86;
+}
+
+div.article-nav {
+  border-top: 1px solid #ddd8d2;
+  border-bottom: 1px solid #ddd8d2;
+  display: flex;
+}
+
+div.article-nav div.article-prev {
+  width: 50%;
+  margin: 40px 0;
+  padding: 0 40px;
+  text-align: right;
+  border-right: 1px solid #ddd8d2;
+}
+
+div.article-nav div.article-next {
+  width: 50%;
+  margin: 40px 0;
+  padding: 0 40px;
+  text-align: left;
+}
+
+div.article-nav p.article-nav-heading {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: #98001b;
+}
+
+div.article-nav p.article-nav-title {
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+div.article-nav a {
+  font-size: 16px;
+  color: #333;
+}
+
+div.all-articles-nav {
+
+}
+
+div.all-articles-nav p {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+div.all-articles-nav a{
+  color: #333;
+}
+
+@media screen and (max-width:480px) {
+  div.container-main {
+    margin-top: 25px;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.container-main-left {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  div.main-article-pane {
+    width: 100%;
+  }
+
+  div.main-article-image {
+    margin-bottom: 25px;
+  }
+
+  div.main-article-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.main-article-date {
+    float: right;
+    width: 60px;
+    padding-left: 16px;
+    padding-right: 0;
+    border-left: 1px solid #333;
+  }
+
+  div.main-article-date p.year-month {
+    margin-top: -8px;
+    font-size: 14px;
+    text-align: center;
+  }
+  div.main-article-date p.day {
+    margin-top: -8px;
+    margin-bottom: -15px;
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+  }
+  div.main-article-info {
+    float:left;
+    width: calc(100% - 60px);
+    border: 0;
+    padding: 0;
+  }
+  div.main-article-info h1.title {
+    font-size: 18px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    padding-right: 16px;
+    line-height: 1.6;
+  }
+  div.main-article-info p.info {
+    font-size: 10px;
+    color: #968f86;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  div.main-article-content {
+    margin-top: 40px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2.0;
+    clear: both;
+  }
+
+
+
+  div.main-article-content p {
+    margin-bottom: 40px;
+  }
+
+  div.main-article-content h2 {
+    margin-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    font-size: 22px;
+    font-family: 'Crimson Text', sans-serif;
+  }
+
+  div.main-article-content h2::before {
+    position: relative;
+    top: 0;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    content: '';
+    border-radius: 100%;
+    background-color: #98001b;
+    display: inline-block;
+  }
+
+  div.main-article-content h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Crimson Text', sans-serif;
+  }
+
+  div.main-article-content h3::before {
+    position: relative;
+    top: -6px;
+    left: -10px;
+    width: 15px;
+    height: 1px;
+    content: '';
+    background-color: #98001b;
+    display: inline-block;
+  }
+
+  div.main-article-content div.toc {
+    margin-top: 40px;
+    padding: 30px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.main-article-content div.toc div {
+      width: 100%;
+      font-size: 18px;
+      font-family: 'Crimson Text', sans-serif;
+  }
+
+  div.main-article-content div.toc ol {
+    border-left: 1px solid #333;
+    padding-left: 30px;
+  }
+
+  div.main-article-content div.toc ol li a {
+    color: #98001b;
+  }
+
+  div.main-article-content table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  div.main-article-content table th {
+    background-color: #ebe7e1;
+    padding: 20px;
+    font-weight: bold;
+    border: 1px solid #ddd8d2;
+  }
+
+  div.main-article-content table td {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd8d2;
+  }
+
+  div.main-article-content ul {
+
+  }
+
+  div.main-article-content ul li {
+    margin-left: 18px;
+  }
+
+  div.container-main-right {
+    margin: 0 auto;
+    min-width: 280px;
+    width: 30%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  div.intro-article-pane:not(:first-child) {
+    margin-top: 32px;
+  }
+
+  div.intro-article-image {
+    float: left;
+    width: 120px;
+  }
+
+  div.intro-article-image img{
+      width: 120px;
+      height: 80px;
+      border-radius: 8px;
+  }
+
+  div.intro-article-info {
+    float: left;
+    width: 140px;
+    margin-left: 20px;
+  }
+
+  div.intro-article-info p.date {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  div.intro-article-info p.title {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  div.intro-article-pane p.info {
+    clear: both;
+    padding-top: 10px;
+    font-size: 11px;
+    color: #968f86;
+  }
+
+  div.article-nav {
+    border-top: 1px solid #ddd8d2;
+    border-bottom: 1px solid #ddd8d2;
+    display: flex;
+  }
+
+  div.article-nav div.article-prev {
+    width: 50%;
+    margin: 40px 0;
+    padding: 0 40px;
+    text-align: right;
+    border-right: 1px solid #ddd8d2;
+  }
+
+  div.article-nav div.article-next {
+    width: 50%;
+    margin: 40px 0;
+    padding: 0 40px;
+    text-align: left;
+  }
+
+  div.article-nav p.article-nav-heading {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #98001b;
+  }
+
+  div.article-nav p.article-nav-title {
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  div.article-nav a {
+    font-size: 16px;
+    color: #333;
+  }
+
+  div.all-articles-nav {
+
+  }
+
+  div.all-articles-nav p {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+
+  div.all-articles-nav a{
+    color: #333;
+  }
+}
+/*************** end of Article              ******************/
+/*************** begenning of All Articles   ******************/
 div.all-articles {
   width: 90%;
   min-width: 880px;
@@ -948,3 +1484,6 @@ div.all-articles div.article-info p.article-author {
   font-family: 'Roboto', sans-serif;
   color: #968f86;
 }
+
+/*************** end of All Articles             ******************/
+/*************** begenning of Article   ******************/

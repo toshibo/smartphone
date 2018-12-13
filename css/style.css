@@ -14,7 +14,7 @@ body {
 /*************** end of global properties         ******************/
 div.container-wrapper {
   max-width: 1920px;
-  width:100%;
+  width: 100%;
   margin: 0 auto;
   padding-top: 77px;
   background-color: #fff;
@@ -50,9 +50,6 @@ div.container-1st {
 
 div.header{
   width: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 div.header h1 {
   text-align: center;
@@ -62,6 +59,20 @@ div.header h1 img {
   width: 87px;
   height: 274px;
 }
+
+
+div.header a.nav-button {
+  display: none;
+}
+
+div.header nav {
+  margin-top: 150px;
+}
+
+div.header nav div.logo {
+  display: none;
+}
+
 @media screen and (max-width:480px) {
   div.header {
     width: 100%;
@@ -83,21 +94,6 @@ div.header h1 img {
     width: 44px;
     height: 137px;
   }
-}
-
-div.header a.nav-button {
-  display: none;
-}
-
-div.header nav {
-
-}
-
-div.header nav div.logo {
-  display: none;
-}
-
-@media screen and (max-width:480px) {
   div.header nav {
     display: none;
     margin: 0;
@@ -291,37 +287,37 @@ div.other-articles {
   font-family: 'Roboto', sans-serif;
 }
 
-div.article-pane:not(:first-child) {
+div.other-articles div.article-pane:not(:first-child) {
   margin-top: 32px;
 }
 
-div.article-image {
+div.other-articles div.article-image {
   float: left;
   width: 120px;
 }
 
-div.article-image img{
+div.other-articles div.article-image img{
     width: 120px;
     height: 80px;
 }
 
-div.article-info {
+div.other-articles div.article-info {
   float: left;
   width: 140px;
   margin-left: 20px;
 }
 
-div.article-info p.article-date {
+div.other-articles div.article-info p.article-date {
   font-size: 12px;
   margin-bottom: 4px;
 }
 
-div.article-info p.title {
+div.other-articles div.article-info p.title {
   font-size: 14px;
   line-height: 1.6;
 }
 
-div.article-pane p.info {
+div.other-articles div.article-pane p.info {
   clear: both;
   padding-top: 10px;
   font-size: 11px;
@@ -402,41 +398,41 @@ div.article-pane p.info {
     justify-content: space-between;
   }
 
-  div.article-pane {
+  div.other-articles div.article-pane {
     margin-top: 28px;
     width: 46%;
   }
-  div.article-pane:not(:first-child) {
+  div.other-articles div.article-pane:not(:first-child) {
     margin-top: 28px;
   }
 
-  div.article-image {
+  div.other-articles div.article-image {
     float: none;
     width: 100%;
   }
 
-  div.article-image img {
+  div.other-articles div.article-image img {
     width: 100%;
     height: auto;
   }
 
-  div.article-info {
+  div.other-articles div.article-info {
     width: 100%;
     margin: 0;
   }
 
-  div.article-info p.article-date {
+  div.other-articles div.article-info p.article-date {
     font-size: 12px;
     margin-top: 8px;
     margin-bottom: 5px;
   }
 
-  div.article-info p.title {
+  div.other-articles div.article-info p.title {
     font-size: 14px;
     line-height: 1.6;
   }
 
-  div.article-pane p.info {
+  div.other-articles div.article-pane p.info {
     clear: both;
     padding-top: 10px;
     font-size: 10px;
@@ -733,13 +729,17 @@ div.swiper-container div.swiper-slide div.review-user img{
 }
 
 div.container-2nd {
+  padding-top: 70px;
+  width: 100%;
   background-color: #ebe7e1;
 }
 
 h2 {
-  margin-bottom: 40px;
   width: 100%;
-  font-size: 24px;
+  min-width: 768px;
+  max-width: 1140px;
+  margin: 0 auto;
+  font-size: 32px;
 }
 
 div.reviewers {
@@ -747,7 +747,7 @@ div.reviewers {
   min-width: 768px;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 80px 0 100px 0;
+  padding: 44px 0 100px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -887,6 +887,54 @@ div.footer div.copyright {
 /*************** begenning of all articles   ******************/
 div.container-2col-main {
   width: calc(100% - 120px);
-  padding-top: 10px;
+  padding-top: 34px;
   display: flex;
+}
+
+div.all-articles {
+  width: 90%;
+  min-width: 880px;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.all-articles div.article-pane {
+  width: 285px;
+  margin-top: 58px;
+}
+
+div.all-articles p.article-image {
+
+}
+
+div.all-articles p.article-image img {
+  width: 285px;
+  height: auto;
+  border-radius: 8px;
+}
+
+div.all-articles div.article-info {
+  width: 100%;
+  border-left: 1px solid #333;
+  padding-left: 24px;
+}
+
+div.all-articles div.article-info p.article-date {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+div.all-articles div.article-info p.article-title {
+  margin-top: 12px;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+div.all-articles div.article-info p.article-author {
+  margin-top: 8px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: #968f86;
 }

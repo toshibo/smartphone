@@ -17,9 +17,9 @@ div.container-wrapper {
   width: 100%;
   margin: 0 auto;
   padding-top: 77px;
-  background-color: #fff;
-  background-image: url("../images/background_002.gif");
-  background-position: center 315px;
+  background-color: #f5f2ed;
+  background-image: url("../images/background_003.gif");
+  background-position: center top;
   background-repeat: no-repeat;
 }
 @media screen and (max-width:480px) {
@@ -27,7 +27,9 @@ div.container-wrapper {
     width: 100%;
     margin: 0;
     padding-top: 22px;
-    background-position: center 200px;
+    background-image: url("../images/background_sp.gif");
+    background-size: 800px auto;
+    background-position: center top;
   }
 }
 
@@ -787,6 +789,7 @@ div.reviewers div.reviewer-pane div.reviewer-review-count {
   h2 {
     margin-bottom: 10px;
     width: 100%;
+    min-width: 100%;
     font-size: 24px;
 
   }

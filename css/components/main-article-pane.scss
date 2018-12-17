@@ -1,0 +1,93 @@
+@import "../bases/responsive";
+@import "../bases/base";
+
+div.main-article-pane {
+  margin: 0 auto;
+  width: 630px;
+  @include sp {
+    width: 100%;
+  };
+
+  div.main-article-image {
+    margin-bottom: 30px;
+    @include sp {
+      margin-bottom: 25px;
+    };
+
+    img {
+      border-radius: 8px;
+      @include sp {
+        width: 100%;
+        height: auto;
+      };
+    }
+  }
+
+  div.main-article-date {
+    float: left;
+    width: 68px;
+    padding-right: 24px;
+    @include sp {
+      float: right;
+      width: 60px;
+      padding-left: 16px;
+      padding-right: 0;
+      border-left: 1px solid #333;
+    }
+
+    .year-month {
+      font-size: 14px;
+      text-align: center;
+      @include sp {
+        margin-top: -8px;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+    .day {
+      margin-bottom: -15px;
+      font-size: 52px;
+      font-weight: bold;
+      text-align: center;
+      @include sp {
+        margin-top: -8px;
+        margin-bottom: -15px;
+        font-size: 52px;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+  div.main-article-info {
+    float:left;
+    width: 562px;
+    border-left: 1px solid #333;
+    padding: 0 10px 0 24px;
+    @include sp {
+      float:left;
+      width: calc(100% - 60px);
+      border: 0;
+      padding: 0;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      @include sp {
+        font-size: 18px;
+        margin-top: -8px;
+        margin-bottom: 10px;
+        padding-right: 16px;
+      }
+    }
+    .info {
+      font-size: 14px;
+      color: $subFontColor;
+      font-family: $enSubFontFamily;
+      @include sp {
+        font-size: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+@import "../bases/responsive";
+@import "../bases/base";
+
+div.main-article-content {
+  margin-top: 40px;
+  font-size: 14px;
+  font-family: $enSubFontFamily;
+  line-height: 2.0;
+  clear: both;
+  @include sp {
+
+  }
+  p {
+    margin-bottom: 40px;
+    @include sp {
+
+    }
+  }
+  h2 {
+    margin-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    font-size: 20px;
+    font-family: $enMainFontFamily;
+    @include sp {
+
+    }
+  }
+  h2::before {
+    position: relative;
+    top: 0;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    content: '';
+    border-radius: 100%;
+    background-color: #98001b;
+    display: inline-block;
+    @include sp {
+
+    }
+  }
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-family: $enMainFontFamily;
+    @include sp {
+
+    }
+  }
+  h3::before {
+    position: relative;
+    top: -6px;
+    left: -10px;
+    width: 15px;
+    height: 1px;
+    content: '';
+    background-color: #98001b;
+    display: inline-block;
+    @include sp {
+
+    }
+  }
+  div.toc {
+    margin-top: 40px;
+    padding: 30px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    @include sp {
+      flex-wrap: wrap;
+    }
+    div {
+        padding-right: 30px;
+        font-size: 18px;
+        font-family: 'Crimson Text', sans-serif;
+        @include sp {
+            width: 100%;
+        }
+    }
+    ol {
+      border-left: 1px solid #333;
+      padding-left: 44px;
+      @include sp {
+          padding-left: 30px;
+      }
+      li a {
+        color: #98001b;
+        @include sp {
+
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    @include sp {
+
+    }
+    th {
+      background-color: #ebe7e1;
+      padding: 20px;
+      font-weight: bold;
+      border: 1px solid #ddd8d2;
+      @include sp {
+
+      }
+    }
+    td {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd8d2;
+      @include sp {
+
+      }
+    }
+  }
+  ul {
+    @include sp {
+
+    }
+    li {
+      margin-left: 18px;
+      margin-bottom: 14px;
+      @include sp {
+
+      }
+    }
+  }
+}
+
+div.article-nav {
+  border-top: 1px solid #ddd8d2;
+  border-bottom: 1px solid #ddd8d2;
+  display: flex;
+  @include sp {
+    display: block;
+    border-bottom: none;
+  }
+
+  div.article-prev {
+    width: 50%;
+    margin: 40px 0;
+    padding: 0 40px;
+    text-align: right;
+    border-right: 1px solid #ddd8d2;
+    @include sp {
+      margin: 10px 0;
+      padding: 0;
+      border-right: none;
+      border-bottom: 1px solid #ddd8d2;
+      width: 100%;
+      text-align: left;
+      display: flex;
+    }
+
+  }
+
+  div.article-next {
+    width: 50%;
+    margin: 40px 0;
+    padding: 0 40px;
+    text-align: left;
+    @include sp {
+      margin: 10px 0;
+      padding: 0;
+      border-bottom: 1px solid #ddd8d2;
+      width: 100%;
+      text-align: left;
+      display: flex;
+    }
+
+  }
+
+  p.article-nav-heading {
+    font-size: 14px;
+    font-family: $enSubFontFamily;
+    color: #98001b;
+    @include sp {
+      width: 84px;
+    }
+  }
+
+  p.article-nav-title {
+    margin-top: 12px;
+    line-height: 1.6;
+    @include sp {
+      margin: 0;
+      margin-left: 14px;
+      width: calc(100% - 84px);
+    }
+  }
+
+  a {
+    font-size: 16px;
+    color: #333;
+    @include sp {
+
+    }
+  }
+
+  div.all-articles-nav {
+    margin-bottom: 70px;
+    border-bottom: 1px solid #ddd8d2;
+    @include sp {
+
+    }
+    p {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      @include sp {
+
+      }
+    }
+
+    a {
+      color: #333;
+      @include sp {
+
+      }
+    }
+  }
+}

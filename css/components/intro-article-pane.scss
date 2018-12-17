@@ -1,0 +1,79 @@
+@import "../bases/responsive";
+@import "../bases/base";
+
+div.intro-article-pane {
+  @include sp {
+    margin-top: 28px;
+    width: 46%;
+  }
+}
+
+div.intro-article-pane:not(:first-child) {
+  margin-top: 32px;
+  @include sp {
+    margin-top: 28px;
+  }
+}
+
+div.intro-article-image {
+  float: left;
+  width: 120px;
+  @include sp {
+    float: none;
+    width: 100%;
+  }
+  img{
+      width: 120px;
+      height: 80px;
+      border-radius: 8px;
+      @include sp {
+        width: 100%;
+        height: auto;
+      }
+  }
+}
+
+div.intro-article-info {
+  float: left;
+  width: 140px;
+  margin-left: 20px;
+  @include sp {
+    width: 100%;
+    margin: 0;
+  };
+
+  .date {
+    font-size: 12px;
+    font-family: $enSubFontFamily;
+    margin-bottom: 4px;
+    @include sp {
+      font-size: 12px;
+      margin-top: 8px;
+      margin-bottom: 5px;
+    };
+  }
+
+  .title {
+    font-size: 14px;
+    font-family: $enSubFontFamily;
+    line-height: 1.6;
+    @include sp {
+
+    };
+  }
+}
+
+div.intro-article-pane p.info {
+  clear: both;
+  padding-top: 10px;
+  font-size: 11px;
+  color: $subFontColor;
+  font-family: $enSubFontFamily;
+  @include sp {
+    clear: both;
+    padding-top: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #968f86;
+  };
+}

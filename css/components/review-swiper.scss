@@ -1,0 +1,206 @@
+@import "../bases/responsive";
+@import "../bases/base";
+
+div.swiper-container {
+  margin-top: 40px;
+  width: 100%;
+  min-width: 1080px;
+  font-family: $enSubFontFamily;
+  @include sp {
+    min-width: 100%;
+    max-width: 100%;
+  };
+}
+
+div.swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 130px;
+  @include sp {
+    padding-bottom: 30px;
+    display: block;
+  };
+}
+
+div.swiper-slide {
+  width: 340px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: flex-start;
+  @include sp {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 25px;
+  };
+
+  img {
+    width: 280px;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 8px;
+    @include sp {
+      width: 100%;
+      height: auto;
+    };
+  }
+  div.review-product {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    @include sp {
+
+    };
+  }
+  div.review-brewery {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #968f86;
+    @include sp {
+
+    };
+  }
+  div.review-graph {
+    display: flex;
+    width: 100%;
+    padding-top: 8px;
+    @include sp {
+
+    };
+
+    div.review-graph-label {
+      width: 70px;
+      font-size: 10px;
+      letter-spacing: 0;
+      color: #968f86;
+      @include sp {
+
+      };
+    }
+    div.review-graph-label:first-child {
+    	width: 66px;
+      @include sp {
+
+      };
+    }
+    div.review-graph-bar {
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: calc(100% - 160px);
+      /*width: 120px;*/
+      border-radius: 2px;
+      height: 4px;
+      margin: 0 10px;
+      align-self: center;
+      background-color: #ddd8d2;
+      @include sp {
+
+      };
+      div.review-graph-pointer {
+        position: relative;
+        top: -4px;
+        width: 10px;
+        /*width: 154px; width of the superclass - width of the pointer */
+        height:10px;
+        background-image: url("../images/review-graph-pointer.gif");
+        background-repeat: no-repeat;
+        z-index: 2;
+        @include sp {
+
+        };
+      }
+    }
+  }
+  hr.review-partition {
+    width: 100%;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #ddd8d2;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    @include sp {
+
+    };
+  }
+  div.review-comment {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #968f86;
+    @include sp {
+
+    };
+  }
+  ul.review-tag {
+    width: 200px;
+    font-size: 12px;
+    color: #968f86;
+    list-style: none;
+    @include sp {
+      width: 76%;
+      font-size: 12px;
+      color: #968f86;
+      list-style: none;
+    };
+
+    li{
+      float: left;
+      margin: 4px 4px 0 0;
+      padding: 4px;
+      border-radius: 4px;
+      background-color: #ebe7e1;
+      @include sp {
+
+      };
+    }
+  }
+  div.review-user {
+    width: 80px;
+    padding-left: 20px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #968f86;
+    @include sp {
+      width: 24%;
+      padding-left: 4px;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #968f86;
+    }
+
+    p {
+      text-align: center;
+      @include sp {
+
+      };
+    }
+
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      color: #968f86;
+      filter: brightness(90%);
+      margin-bottom: 4px;
+      @include sp {
+        width: 100%;
+        height: auto;
+        border-radius: 100%;
+        color: #968f86;
+        filter: brightness(90%);
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,46 @@
+@import "../bases/responsive";
+@import "../bases/base";
+
+div.footer {
+  width: 100%;
+  min-width: 768px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  color: #968f86;
+  font-family: $enSubFontFamily;
+  display: flex;
+  @include sp {
+    min-width: 100%;
+    max-width: 100px;
+    padding-bottom: 80px;
+  }
+}
+
+div.footer div.footer-content {
+  width: calc(100% - 158px);
+  margin-right: 39px;
+  border-top: 1px solid #ddd8d2;
+  display: flex;
+  align-items: flex-end;
+  @include sp {
+    border-top: 0;
+  }
+}
+
+div.footer div.copyright {
+  width: 119px;
+  font-size: 12px;
+  @include sp {
+
+  }
+}
+
+div.footer-logo img {
+	width: 119px;
+	height: auto;
+  @include sp {
+    width: 98px;
+    height: 69px;
+  }
+}

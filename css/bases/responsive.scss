@@ -1,0 +1,15 @@
+// max-width for PC
+$widthPC: 1140px;
+// max-width for Smartphone
+$widthSP: 480px;
+
+@mixin pc {
+  @media (max-width: ($widthPC)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($widthSP)) {
+    @content;
+  }
+}

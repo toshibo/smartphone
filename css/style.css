@@ -9,7 +9,6 @@ body {
   color: #333;
   font-family: 'Crimson Text', 'Noto Serif JP', sans-serif;
   letter-spacing: 0.02em;
-
 }
 
 a {
@@ -158,7 +157,7 @@ div.header nav div.logo {
     height: 18px;
   }
 
-  div.header a.nav-button, div.header a.nav-button span {
+  div.header a.nav-button span {
     display: inline-block;
     transition: all 0.4s;
     box-sizing: border-box;
@@ -979,7 +978,7 @@ div.main-article-content h2 {
   margin-bottom: 40px;
   border-bottom: 1px solid #333;
   width: 100%;
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Crimson Text', sans-serif;
 }
 
@@ -1064,6 +1063,7 @@ div.main-article-content ul {
 
 div.main-article-content ul li {
   margin-left: 18px;
+  margin-bottom: 14px;
 }
 
 div.container-main-right {
@@ -1149,7 +1149,8 @@ div.article-nav a {
 }
 
 div.all-articles-nav {
-
+  margin-bottom: 70px;
+  border-bottom: 1px solid #ddd8d2;
 }
 
 div.all-articles-nav p {
@@ -1250,7 +1251,7 @@ div.all-articles-nav a{
     margin-bottom: 40px;
     border-bottom: 1px solid #333;
     width: 100%;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Crimson Text', sans-serif;
   }
 
@@ -1336,6 +1337,7 @@ div.all-articles-nav a{
 
   div.main-article-content ul li {
     margin-left: 18px;
+    margin-bottom: 14px;
   }
 
   div.container-main-right {

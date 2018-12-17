@@ -1,0 +1,41 @@
+@import "../bases/responsive";
+@import "../bases/base";
+
+$widthProdoctImage: 340px;
+
+div.product-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+
+  div.product-image {
+    margin-left: 60px;
+    width: $widthProdoctImage;
+    height: $widthProdoctImage;
+    border: 1px solid #ddd8d2;
+    border-radius: 10px;
+    background-color: #fff;
+    img {
+      margin: 20px;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  div.product-desc {
+    width: calc(100% - $widthProdoctImage);
+  }
+
+  h1.product-name {
+    width: 100%;
+    font-size: 30px;
+  }
+  p.brewery-name {
+    width: 100%;
+    color: $subFontColor;
+    font-size: 18px;
+    font-family: $enSubFontFamily;
+  }
+}

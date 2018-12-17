@@ -1,0 +1,166 @@
+@import "../bases/responsive";
+@import "../bases/base";
+
+div.header{
+  width: 120px;
+  @include sp {
+    width: 100%;
+    height: 21px;
+  };
+
+  a {
+    color: #968f86;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    @include hoverWithUnderline;
+  }
+
+  h1.logo {
+    text-align: center;
+    @include sp {
+      width: 75px;
+      height: 164px;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      border-bottom-right-radius: 8px;
+      text-align: left;
+      padding-left: 8px;
+    };
+    img {
+      width: 87px;
+      height: 274px;
+      @include sp {
+        width: 44px;
+        height: 137px;
+      };
+    }
+  }
+  nav {
+    margin-top: 150px;
+    @include sp {
+      display: none;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      padding-top: 74px;
+      opacity: 0.8;
+    };
+    
+    ul {
+      li {
+        list-style-type: none;
+        text-align: center;
+        position: relative;
+        margin-top: 24px;
+      }
+      li:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -12px;
+        width: 10px;
+        height: 1px;
+        background-color: #333;
+        transform: translateX(-50%);
+      }
+    }
+    div.logo {
+      // shows this logo only while opening the full-screen menu in smartphone
+      display: none;
+      @include sp {
+        display: block;
+        text-align: center;
+      };
+      img {
+        @include sp {
+          margin-top: 50px;
+          width: 98px;
+          height: 69px;
+        };
+      }
+    }
+  }
+  a.nav-button {
+    // shows this hamburger-menu only while opening in smartphone
+    display: none;
+    @include sp {
+      display: block;
+      cursor: pointer;
+      z-index: 30;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 3px;
+      margin-right: 3px;
+      width: 25px;
+      height: 18px;
+    };
+    span {
+      @include sp {
+        display: inline-block;
+        transition: all 0.4s;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #333;
+        border-radius: 4px;
+      };
+    }
+    span:nth-of-type(1) {
+      @include sp {
+        top: 0;
+      };
+    }
+    span:nth-of-type(2) {
+      @include sp {
+        top: 8px;
+      };
+    }
+    span:nth-of-type(3) {
+      @include sp {
+        bottom: 0;
+      };
+    }
+  }
+  .nav-button.active span:nth-of-type(1) {
+    @include sp {
+      -webkit-transform: translateY(8px) rotate(-45deg);
+      transform: translateY(8px) rotate(-45deg);
+    };
+  }
+  .nav-button.active span:nth-of-type(2) {
+    @include sp {
+      opacity: 0;
+    };
+  }
+  .nav-button.active span:nth-of-type(3) {
+    @include sp {
+      -webkit-transform: translateY(-8px) rotate(45deg);
+      transform: translateY(-8px) rotate(45deg);
+    };
+  }
+  nav.open {
+    @include sp {
+      display: block;
+    };
+  }
+  nav.close {
+    @include sp {
+      display: none;
+    };
+  }
+
+}

@@ -10,10 +10,11 @@
 @import "./components/reviewers";
 @import "./components/footer";
 
-@import "./components/product-info";
-
 // stylesheet for individual article page
 @import "./pages/article";
 
 // stylesheet for all-articles page
 @import "./pages/all-article";
+
+// stylesheet for product page
+@import "./pages/product";

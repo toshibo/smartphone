@@ -22,6 +22,10 @@ $enSubFontFamily: 'Roboto', sans-serif;
   text-decoration: none;
 }
 
+@mixin clearfix {
+  clear: both;
+}
+
 body {
   background-color: $baseBGColor;
   color: $baseFontColor;
